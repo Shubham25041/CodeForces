@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    
+    int n;
+    cin>>n;
+    
+    
+    int i=0;
+    string ans;
+    int count = 0;
+    
+    while(n--){
+        string str;
+        cin>>str;
+        
+        while(i<str.length()){
+            if(i == 0){
+                ans += str[i];
+            }
+            else if(i == str.length()-1){
+                ans += to_string(count);
+                ans += str[i];
+            }
+            else{
+                count++;
+            }
+            i++;
+        }
+    }
+        
+    if(count >= 8){
+        cout<<ans<<endl;
+    }
+    else{
+        cout<<str<<endl;
+    }
+    
+    
+}
+
+
+------------------------------------------ Wrong Code Above ---------------------------------------
+
+
